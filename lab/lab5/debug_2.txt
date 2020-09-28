@@ -1,0 +1,3 @@
+for this I have to gdb with the --args tag and enter a positive integer as the argument, I would "break factorial" then run the code making it stop at the factorial function when attempting to calculate factorial of 5. Next we would like to display fact and n by "display fact" and "display n" and later step into the while loop with "s" and tracing the values
+The first issue we see is the subtraction of n to 4 wihtout multiplying it into fact. Then as n reaches 1 n-- subtracts it to 0 after the while loop conditional check of n > 0, thus we will have the factorial of n-1 be multiplied to 0 which makes fact 0 when returned. This makes  the factorial of any number of this program = 0.
+to get rid of this issue we simply shift the -- to the n on line 19 instead of 18.

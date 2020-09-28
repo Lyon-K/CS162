@@ -1,0 +1,6 @@
+Political_Science 1
+Criminal_Justice 1
+Law 2
+Communications 1
+Public_and_Environmental_Affairs 1
+General_Sciences 1

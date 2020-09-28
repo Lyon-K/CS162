@@ -1,0 +1,13 @@
+STEP1:
+Q1) no we cannot because it takes in 2 arguments which would mean that it is global 
+		instead of taking in the object that calls it.
+Q2) The 2 functions woud have to be a friend of Shape which allows them to access
+		private variables even if they are not part of the class.
+
+STEP2:
+Which function are you going to make polymorphic?	area and display
+• How will you make it polymorphic? 	by having virtual functions, dynamic linkage 
+														or late binding
+• Can it be a pure virtual function?	no, because if it is then you wont be able to define it
+• Which class have you made an abstract base class? Shape
+

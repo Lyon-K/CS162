@@ -1,0 +1,7 @@
+first of all change the makefile to compile all files with the -g tag, then run debug_1 with gdb and by typing "run" you will be able to see:
+Program received signal SIGSEGV, Segmentation fault.
+0x000000000040082f in setval (i_ptr=0x400730 <_start>, val=4) at debug_1.cpp:13
+13        *i_ptr = val;
+which indicates the error exists on line 13
+
+this is when the function is called on b because it states the value is 4, and the error is located at setting b as an integer pointer and passing the address of b into an integer pointer

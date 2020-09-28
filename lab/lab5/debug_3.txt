@@ -1,0 +1,14 @@
+firstly, compile with -g tag and run gdb with argument of data.tsv as requested, then by runing, an error will occur specifically stating:
+Program received signal SIGSEGV, Segmentation fault.
+__exchange_and_add_dispatch (__val=-1, __mem=0x29)
+    at /usr/src/debug/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/x86_64-redhat-linux/libstdc++-v3/include/ext/atomicity.h:84
+84            return __exchange_and_add_single(__mem, __val);
+we then start again and next until the segfault which is at line 109, by starting again and stepping into it we will arrive at a do while loop that gets last name, first name, and id of a person and set it into people. after i = 8, we attempt to go and set the new_person at index 8 which arrives at a seg fault as people is defined with an array of 8 which has a maximum index of 7. this can be fixed by increasing the size of people.
+
+the do while loop should also stop when i < n
+
+in steinbeck's id ther is a letter which caused the buffer to read in ints to crash and stop reading ints so we have to take away the "A" and the same goes for Elizebeth
+
+average should be calculated by adding all age then only dividing it by n
+
+maximum should be updated if it is less than what is being checked instead of more than
